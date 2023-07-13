@@ -13,7 +13,7 @@ import com.devsuperior.course.entities.User;
 import com.devsuperior.course.services.UserService;
 
 @RestController
-@RequestMapping(value = "/users")
+@RequestMapping("/users")
 public class UserResource {
 
     @Autowired
@@ -26,7 +26,7 @@ public class UserResource {
         return ResponseEntity.ok().body(list);
     }
 
-    @GetMapping(value = "/{Id}")
+    @GetMapping("/{Id}")
     public ResponseEntity<User> findById(@PathVariable Long Id){
         User obj = services.findById(Id);
         return ResponseEntity.ok().body(obj);
