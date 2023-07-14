@@ -8,12 +8,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Setter
-@AllArgsConstructor
+
 @NoArgsConstructor
 @Entity
 @Table(name = "tb_order_item")
@@ -58,5 +55,15 @@ public class OrderItem implements Serializable {
     public Double getPrice() {
         return price;
     }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    
     
 }
