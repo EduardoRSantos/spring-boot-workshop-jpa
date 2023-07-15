@@ -10,13 +10,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.NoArgsConstructor;
 
-
 @NoArgsConstructor
 @Entity
 @Table(name = "tb_order_item")
 public class OrderItem implements Serializable {
 
-    
     @EmbeddedId
     private OrderItemPK id = new OrderItemPK();
 
@@ -31,6 +29,11 @@ public class OrderItem implements Serializable {
         this.price = price;
     }
 
+    
+    public Double getSubTotal() {
+        return price * quantity;
+    }
+    
     @JsonIgnore
     public Order getOrder() {
         return id.getOrder();
@@ -64,6 +67,4 @@ public class OrderItem implements Serializable {
         this.price = price;
     }
 
-    
-    
 }

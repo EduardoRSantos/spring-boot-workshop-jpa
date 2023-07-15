@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.devsuperior.course.entities.enums.OrderStatus;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -50,6 +51,15 @@ public class Order implements Serializable {
         this.client = client;
     }
 
+    
+    public Double getTotal() {
+        Double sum = 0.0;
+        for (OrderItem x : items) {
+            sum += x.getSubTotal();
+        }
+        return sum;
+    }
+
     public Long getId() {
         return id;
     }
@@ -87,7 +97,7 @@ public class Order implements Serializable {
     public Set<OrderItem> getItems() {
         return items;
     }
-    
+
     public Payment getPayment() {
         return payment;
     }
