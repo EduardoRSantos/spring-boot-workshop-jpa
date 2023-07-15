@@ -1,6 +1,6 @@
-# Meu projeto
+# Spring Boot e JPA / Hibernate
 
-Este projeto é um Projeto web services com Spring Boot e JPA / Hibernate. Ele foi criado por Dr. Nelio Alves.
+Este projeto é um Projeto web services. Ele foi criado por Dr. Nelio Alves.
 
 ## Objetivos
 
@@ -18,6 +18,9 @@ Este projeto é um Projeto web services com Spring Boot e JPA / Hibernate. Ele f
 - https://github.com/acenelio/workshop-springboot3-jpa
 
 ##
-![Image instance](img/instance.png)
-##
+
 ![Image model](img/model.png)
+
+##
+
+![Image instance](img/instance.png)
