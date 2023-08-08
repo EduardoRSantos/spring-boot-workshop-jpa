@@ -1,6 +1,6 @@
 # Spring Boot e JPA / Hibernate
 
-Este projeto é um Projeto web services. Ele foi criado por Dr. Nelio Alves.
+Este é um projeto web services. Ele foi criado por Dr. Nelio Alves.
 
 ## Objetivos
 
